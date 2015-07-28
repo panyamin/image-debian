@@ -93,9 +93,7 @@ RUN systemctl enable \
 	systemd-modules-load.service \
 	systemd-update-utmp-runlevel \
 	proc-sys-fs-binfmt_misc.automount \
-	kmod-static-nodes.service \
- && systemctl mask \
-        dev-ttyS0.device
+	kmod-static-nodes.service
 
 
 RUN rm -f /sbin/init \
