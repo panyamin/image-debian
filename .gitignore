@@ -9,3 +9,4 @@ rootfs*
 */*.tar
 */*.built
 docker-rules.mk
+qemu-*-static
