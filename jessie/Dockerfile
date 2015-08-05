@@ -2,7 +2,7 @@
 FROM armbuild/debian:jessie
 MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
- 	    	    
+
 # Environment
 ENV DEBIAN_FRONTEND noninteractive
 # Useful for image inheritance
@@ -83,7 +83,7 @@ RUN apt-get -q update && \
 
 
 # Configure locales
-RUN locale-gen
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
 
 
 # Default target
