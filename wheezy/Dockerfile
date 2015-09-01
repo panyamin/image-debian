@@ -95,8 +95,7 @@ RUN locale-gen
 RUN update-rc.d ssh-keys defaults && \
     update-rc.d oc-force-dhclient defaults && \
     update-rc.d sync-kernel-modules defaults && \
-    update-rc.d nbd-root-disconnect defaults && \
-    update-rc.d nbd-add-extra-volumes defaults
+    update-rc.d nbd-root-disconnect defaults
 
 
 # Clean rootfs from image-builder
