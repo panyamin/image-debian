@@ -95,7 +95,6 @@ RUN systemctl enable \
         oc-fetch-ssh-keys \
 	oc-sync-kernel-modules \
 	oc-generate-ssh-keys \
-	oc-add-extra-volumes \
 	oc-gen-machine-id \
 	oc-kernel-check \
  && systemctl disable \
