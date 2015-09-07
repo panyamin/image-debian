@@ -1,7 +1,7 @@
 DOCKER_NAMESPACE =	armbuild/
 NAME =			scw-distrib-debian
 VERSION =		wheezy
-VERSION_ALIASES =	7.8 7
+VERSION_ALIASES =	7.9 7
 TITLE =			Debian
 DESCRIPTION =		Debian Wheezy
 SOURCE_URL =		https://github.com/scaleway/image-debian

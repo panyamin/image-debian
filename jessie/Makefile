@@ -1,7 +1,7 @@
 DOCKER_NAMESPACE =	armbuild/
 NAME =			scw-distrib-debian
 VERSION =		jessie
-VERSION_ALIASES =	8.0 8 latest
+VERSION_ALIASES =	8.2 8 latest
 TITLE =			Debian
 DESCRIPTION =		Debian Jessie
 SOURCE_URL =		https://github.com/scaleway/image-debian
