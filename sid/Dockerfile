@@ -1,12 +1,12 @@
-## -*- docker-image-name: "armbuild/scw-distrib-debian:jessie" -*-
-FROM armbuild/debian:jessie
+## -*- docker-image-name: "armbuild/scw-distrib-debian:sid" -*-
+FROM armbuild/debian:sid
 MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
 
 # Environment
 ENV DEBIAN_FRONTEND noninteractive
 # Useful for image inheritance
-ENV SCW_BASE_IMAGE armbuild/scw-debian:jessie
+ENV SCW_BASE_IMAGE armbuild/scw-debian:sid
 
 
 # ./patches/usr/local/bin/ is where the builder downloads qemu-*-static binaries
@@ -108,6 +108,10 @@ RUN systemctl enable \
 
 RUN rm -f /sbin/init \
  && ln -sf ../lib/systemd/systemd /sbin/init
+
+
+# Patch rootfs
+ADD ./patches/etc/ /etc
 
 
 # Clean rootfs from image-builder

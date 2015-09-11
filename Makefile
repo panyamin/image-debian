@@ -1,4 +1,4 @@
-VERSIONS ?=	wheezy jessie
+VERSIONS ?=	wheezy jessie sid
 PROXYFIED_COMMANDS ?=	\
 	all \
 	build \
