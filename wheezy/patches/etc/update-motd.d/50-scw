@@ -11,11 +11,9 @@ fi
 
 [ -r /etc/scw-release ] && . /etc/scw-release
 
-METADATA=$(oc-metadata --cached)
-
 metadata() {
   key=$1
-  echo "$METADATA" | grep "^$key=" | cut -d= -f2 | sed "s/^['\"]//;s/['\"]$//"
+  oc-metadata --cached "$1"
 }
 
 volume_metadata() {
