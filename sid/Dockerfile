@@ -110,5 +110,9 @@ RUN rm -f /sbin/init \
  && ln -sf ../lib/systemd/systemd /sbin/init
 
 
+# Patch rootfs
+ADD ./patches/etc/ /etc
+
+
 # Clean rootfs from image-builder
 RUN /usr/local/sbin/builder-leave
