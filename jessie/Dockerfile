@@ -1,4 +1,4 @@
-## -*- docker-image-name: "armbuild/scw-distrib-debian:jessie" -*-
+## -*- docker-image-name: "scaleway/debian:jessie" -*-
 FROM armbuild/debian:jessie
 MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
@@ -6,7 +6,7 @@ MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 # Environment
 ENV DEBIAN_FRONTEND noninteractive
 # Useful for image inheritance
-ENV SCW_BASE_IMAGE armbuild/scw-debian:jessie
+ENV SCW_BASE_IMAGE scaleway/debian:jessie
 
 
 # ./patches/usr/local/bin/ is where the builder downloads qemu-*-static binaries

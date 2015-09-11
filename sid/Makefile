@@ -1,8 +1,7 @@
-DOCKER_NAMESPACE =	armbuild/
-NAME =			scw-distrib-debian
+NAME =			debian
 VERSION =		sid
-VERSION_ALIASES =	
-TITLE =			Debian Sid
+VERSION_ALIASES =	unstable
+TITLE =			Debian Sid/Unstable
 DESCRIPTION =		Debian Sid/Unstable
 SOURCE_URL =		https://github.com/scaleway/image-debian
 VENDOR_URL =		https://wiki.debian.org/DebianUnstable

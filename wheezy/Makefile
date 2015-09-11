@@ -1,8 +1,7 @@
-DOCKER_NAMESPACE =	armbuild/
-NAME =			scw-distrib-debian
+NAME =			debian
 VERSION =		wheezy
 VERSION_ALIASES =	7.9 7
-TITLE =			Debian
+TITLE =			Debian Wheezy
 DESCRIPTION =		Debian Wheezy
 SOURCE_URL =		https://github.com/scaleway/image-debian
 VENDOR_URL =		https://www.debian.org
@@ -17,4 +16,3 @@ all:    ../docker-rules.mk
 ../docker-rules.mk:
 	$(MAKE) -C .. docker-rules.mk
 -include ../docker-rules.mk
-## Below you can add custom makefile commands and overrides

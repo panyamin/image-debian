@@ -1,8 +1,7 @@
-DOCKER_NAMESPACE =	armbuild/
-NAME =			scw-distrib-debian
+NAME =			debian
 VERSION =		jessie
 VERSION_ALIASES =	8.2 8 latest
-TITLE =			Debian
+TITLE =			Debian Jessie
 DESCRIPTION =		Debian Jessie
 SOURCE_URL =		https://github.com/scaleway/image-debian
 VENDOR_URL =		https://www.debian.org
