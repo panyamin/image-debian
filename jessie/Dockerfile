@@ -85,7 +85,7 @@ RUN apt-get -q update && \
 
 
 # Configure locales
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
+RUN locale-gen
 
 
 # Default target
