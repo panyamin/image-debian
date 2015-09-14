@@ -92,6 +92,10 @@ RUN locale-gen
 RUN systemctl set-default multi-user
 
 
+# Patch rootfs
+ADD ./patches/etc/ /etc
+
+
 # Configure Systemd
 RUN systemctl enable \
         oc-fetch-ssh-keys \
