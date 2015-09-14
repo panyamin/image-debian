@@ -92,6 +92,14 @@ RUN locale-gen
 RUN systemctl set-default multi-user
 
 
+# Enable update-motd.d support
+RUN rm -f /etc/motd && ln -s /var/run/motd /etc/motd
+
+
+# Patch rootfs
+ADD ./patches/etc/ /etc
+
+
 # Configure Systemd
 RUN systemctl enable \
         oc-fetch-ssh-keys \
@@ -108,10 +116,6 @@ RUN systemctl enable \
 
 RUN rm -f /sbin/init \
  && ln -sf ../lib/systemd/systemd /sbin/init
-
-
-# Patch rootfs
-ADD ./patches/etc/ /etc
 
 
 # Clean rootfs from image-builder
