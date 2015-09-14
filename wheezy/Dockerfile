@@ -21,7 +21,7 @@ ADD ./patches/etc/apt/ /etc/apt/
 RUN apt-get -y -q update \
  && apt-get -y -qq install bash curl lsb-release tar \
  && apt-get -y clean \
- && curl -Lq http://j.mp/scw-skeleton | FLAVORS=common,docker-based bash -e \
+ && curl -Lq http://j.mp/scw-skeleton | FLAVORS=docker-based,common,sysvinit,feature-motd bash -e \
  && /usr/local/sbin/builder-enter
 
 
@@ -81,10 +81,11 @@ RUN apt-get -q update && \
     && apt-get clean
 
 
-# Patch rootfs
-# - Tweaks rootfs so it matches Scaleway infrastructure
+# update-motd.d
 RUN rm -f /etc/motd && ln -s /var/run/motd /etc/motd
-RUN curl -Lq http://j.mp/scw-skeleton | FLAVORS=common,docker-based,sysvinit bash -e
+
+
+# Patch rootfs
 ADD ./patches/etc/ /etc/
 
 
