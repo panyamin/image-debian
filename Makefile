@@ -3,6 +3,9 @@ PROXYFIED_COMMANDS ?=	\
 	all \
 	build \
 	clean \
+	image_on_store \
+	image_on_s3 \
+	image_on_local \
 	info \
 	install \
 	install_on_disk \
